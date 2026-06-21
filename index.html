@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for Mama Ji</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #433318 100%);
+            font-family: 'Georgia', serif;
+            color: #ffd700;
+            text-align: center;
+            padding-top: 100px;
+            height: 100vh;
+            margin: 0;
+        }
+        .container { 
+            background: rgba(0, 0, 0, 0.7); 
+            padding: 40px; 
+            border-radius: 20px; 
+            display: inline-block; 
+            box-shadow: 0 0 20px #ffd700;
+            border: 1px solid #ffd700;
+            max-width: 80%;
+        }
+        button { 
+            padding: 15px 30px; 
+            background: #ffd700; 
+            color: #000; 
+            border: none; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            font-size: 20px; 
+            font-weight: bold;
+        }
+        .typewriter {
+            overflow: hidden; 
+            border-right: .15em solid #ffd700;
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .10em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #ffd700; } }
+        .buy-button { 
+            display: inline-block; 
+            padding: 15px 25px; 
+            background: #ffd700; 
+            color: #000; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Phase 1 -->
+    <div id="page1" class="container">
+        <h1>Namaste Mama Ji! ❤️</h1>
+        <p>Aapke liye ek chhota sa surprise hai...</p>
+        <br>
+        <button onclick="startExperience()">Click Here for a Surprise</button>
+    </div>
+
+    <!-- Phase 2 -->
+    <div id="page2" class="container" style="display:none;">
+        <h2 class="typewriter">Mama, aap mere liye bahut special hain...</h2>
+        <p>Aapki har khushi mere liye mayne rakhti hai.</p>
+        
+        <!-- Audio -->
+        <audio id="myAudio">
+            <source src="https://mp3tourl.com/audio/1782063760843-d870a772-a81e-4d0a-9ca0-04ee67ea1335.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="product-card">
+            <p style="margin-top: 20px; font-weight: bold; color: #ffd700;">Choti si farmaish aapke lala ki:</p>
+            <a href="https://amzn.in/d/01jjGJc6" target="_blank" class="buy-button">Titan Octane Watch Dekhein</a>
+        </div>
+    </div>
+
+    <script>
+        function startExperience() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
 
